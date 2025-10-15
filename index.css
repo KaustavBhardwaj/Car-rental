@@ -171,8 +171,7 @@ html, body{
         #st-2 img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
         }
 
         /* Responsive Styles */
