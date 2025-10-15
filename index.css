@@ -370,14 +370,15 @@ hr{
   margin-top: 40px;
 }
 .deal-card {
-  width: 200px;
+  width: 280px;
   background: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 .deal-img {
   height: 120px;
+  
   background-color: #e9ecef;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -423,4 +424,52 @@ hr{
 
 #m1 {
   display: flex;
+}
+
+
+.slider {
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 12);
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  height: 60px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.slide img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 6)); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide img {
+    height: 40px;
+  }
+  .slide {
+    width: 180px;
+  }
 }
